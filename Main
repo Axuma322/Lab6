@@ -1,22 +1,22 @@
-from eventos import EventManager
-from datamanager import RealTimeDataManager
-import threading
-import time
+from eventos import EventManager  # Importa la clase EventManager de eventos.py
+from datamanager import RealTimeDataManager  # Importa la clase RealTimeDataManager de datamanager.py
+import threading  # Importa el módulo threading para ejecutar procesos en paralelo.
+import time  # Importa el módulo time para controlar el flujo del tiempo.
 
 def print_data(data):
-    print(f"Datos en tiempo real actualizados: {data}")
+    print(f"Datos en tiempo real actualizados: {data}")  # Función callback que imprime los datos actualizados.
 
 if __name__ == "__main__":
-    manager = EventManager()
-    data_manager = RealTimeDataManager(manager)
+    manager = EventManager()  # Crea una instancia de EventManager.
+    data_manager = RealTimeDataManager(manager)  # Crea una instancia de RealTimeDataManager.
 
-    manager.subscribe("data_updated", print_data)
+    manager.subscribe("data_updated", print_data)  # Suscribe la función print_data al evento 'data_updated'.
 
-    update_thread = threading.Thread(target=data_manager.start_real_time_updates)
-    update_thread.start()
+    update_thread = threading.Thread(target=data_manager.start_real_time_updates)  # Crea un hilo para las actualizaciones de datos.
+    update_thread.start()  # Inicia el hilo de actualizaciones.
 
     try:
-        while True:
+        while True:  # Bucle infinito para mantener el programa corriendo.
             time.sleep(1)
-    except KeyboardInterrupt:
+    except KeyboardInterrupt:  # Captura la interrupción por teclado para terminar el programa.
         print("\nPrograma terminado.")
