@@ -1,7 +1,7 @@
 # Sistema de Gestión de Eventos y Actualizaciones en Tiempo Real
 
 ## Descripción General
-Este proyecto en Python implementa un sistema de gestión de eventos y actualizaciones de datos en tiempo real utilizando el patrón de diseño de callbacks. El sistema se compone de tres módulos principales: `EventManager`, `RealTimeDataManager`, y un módulo ejecutable `main.py`.
+Este es un sistema de gestión de eventos y actualizaciones de datos en tiempo real utilizando el patrón de diseño de callbacks. El sistema se compone de tres módulos principales: `EventManager`, `RealTimeDataManager`, y un módulo ejecutable `main.py`.
 
 ## Módulos
 
@@ -33,6 +33,3 @@ Datos en tiempo real actualizados: {'temperatura': 25.633820355546508, 'humedad'
 
 
 Cada línea representa una actualización de los valores de `temperatura` y `humedad`, que ocurre aproximadamente cada 3 segundos.
-
-## Conclusión
-Este proyecto demuestra la eficacia de utilizar el patrón de diseño de callbacks en Python para gestionar eventos y suscripciones en aplicaciones que requieren actualizaciones en tiempo real. Es un ejemplo práctico de cómo se pueden implementar sistemas de notificación y respuesta a eventos en programas más complejos.
