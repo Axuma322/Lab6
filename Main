@@ -3,4 +3,20 @@ from datamanager import RealTimeDataManager
 import threading
 import time
 
-def
+def print_data(data):
+    print(f"Datos en tiempo real actualizados: {data}")
+
+if __name__ == "__main__":
+    manager = EventManager()
+    data_manager = RealTimeDataManager(manager)
+
+    manager.subscribe("data_updated", print_data)
+
+    update_thread = threading.Thread(target=data_manager.start_real_time_updates)
+    update_thread.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\nPrograma terminado.")
