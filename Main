@@ -20,11 +20,3 @@ if __name__ == "__main__":
             time.sleep(1)
     except KeyboardInterrupt:  # Captura la interrupción por teclado para terminar el programa.
         print("\nPrograma terminado.")
-
-Datos en tiempo real actualizados: {'temperatura': 25.135503724540715, 'humedad': 58.72619213938574}
-Datos en tiempo real actualizados: {'temperatura': 25.152980007970235, 'humedad': 58.54094853821499}
-Datos en tiempo real actualizados: {'temperatura': 25.47714880639016, 'humedad': 58.48333141193844}
-Datos en tiempo real actualizados: {'temperatura': 25.06320128795558, 'humedad': 57.34698595121229}
-Datos en tiempo real actualizados: {'temperatura': 25.83796669326286, 'humedad': 58.91154070212184}
-Datos en tiempo real actualizados: {'temperatura': 25.633820355546508, 'humedad': 57.92364213595421}
-
